@@ -49,8 +49,14 @@ COPY . /var/www
 # Copy existing application directory permissions
 COPY --chown=www:www . /var/www
 
+USER root
+RUN curl -sL https://deb.nodesource.com/setup_12.x | bash -
+RUN apt-get install -y nodejs
+
 # Change current user to www
 USER www
+
+
 
 # Expose port 9000 and start php-fpm server
 EXPOSE 9000
