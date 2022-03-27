@@ -6,12 +6,18 @@
     "license": "MIT",
     "require": {
         "php": "^8.0.2",
+        "coderello/laravel-passport-social-grant": "^3.0",
+        "doctrine/dbal": "^3.3",
         "fruitcake/laravel-cors": "dev-develop",
         "guzzlehttp/guzzle": "^7.2",
         "laravel/framework": "^9.0",
         "laravel/passport": "^10.3",
         "laravel/sanctum": "^2.14.1",
-        "laravel/tinker": "^2.7"
+        "laravel/socialite": "^5.5",
+        "laravel/tinker": "^2.7",
+        "socialiteproviders/google": "^4.1",
+        "socialiteproviders/laravelpassport": "^4.1",
+        "socialiteproviders/zoho": "^4.1"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",

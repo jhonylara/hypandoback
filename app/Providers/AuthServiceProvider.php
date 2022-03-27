@@ -2,12 +2,18 @@
 
 namespace App\Providers;
 
+use App\Services\Access\Resolver\AccessUserResolver;
+use Coderello\SocialGrant\Resolvers\SocialUserResolverInterface;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
 use Illuminate\Support\Facades\Gate;
 use Laravel\Passport\Passport;
 
 class AuthServiceProvider extends ServiceProvider
 {
+
+    public $bindings = [
+        SocialUserResolverInterface::class => AccessUserResolver::class,
+    ];
     /**
      * The policy mappings for the application.
      *

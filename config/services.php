@@ -37,4 +37,10 @@ return [
         'redirect' => env('GOOGLE_REDIRECT_URL'),
     ],
 
+    'laravelpassport' => [
+        'client_id' => env('PASSPORT_PERSONAL_ACCESS_CLIENT_ID'),
+        'client_secret' => env('PASSPORT_PERSONAL_ACCESS_CLIENT_SECRET'),
+        'redirect' => env('PASSPORT_PERSONAL_ACCESS_CLIENT_REDIRECT_URL')
+    ],
+
 ];
