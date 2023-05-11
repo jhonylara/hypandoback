@@ -1,5 +1,6 @@
 <?php
 
+use App\Controllers\GenreController;
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -19,11 +20,14 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-///** USER */
-//Route::post('authenticate', function(Request $request) {
-//    $teste = new AuthenticatedSessionController();
-//    return $teste->tokenAuthenticate($request);
-//});
+
+Route::middleware('auth:api')->group(function () {
+    Route::get('genres', function() {
+        return GenreController::genres();
+    });
+});
+
+
 
 ///** USER */
 //Route::group(['middleware' => ['api']], function () {

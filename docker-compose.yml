@@ -11,7 +11,7 @@ services:
         restart: unless-stopped
         tty: true
         environment:
-            XDEBUG_CONFIG: remote_host=192.168.1.5
+            XDEBUG_CONFIG: remote_host=192.168.0.4
             PHP_IDE_CONFIG: serverName=Docker
             SERVICE_NAME: app
             SERVICE_TAGS: dev
